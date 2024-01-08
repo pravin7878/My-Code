@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+}
+
+#inp {
+    display: flex;
+    justify-content: center;
+
+}
+
+input {
+    font-size: 20px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    /* text-align: center;
+    justify-content: center; */
+}
+
+#content>div {
+    border: solid 2px black;
+    border-radius: 12px;
+}
+
+#content>div>img {
+    width: 100%;
+    padding-top: 6px;
+    height: 230px;
+}
+
+#content>div>h3,p{
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+#massage{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+}

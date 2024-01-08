@@ -1,0 +1,47 @@
+#page2{
+    display: flex;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    /* border: solid 3px red; */
+}
+#page2>div{
+    width: 50%;
+    /* border: solid 3px rgb(60, 255, 0); */
+}
+#page2>div>img{
+    width: 100%;
+}
+
+#page2>div>h5{
+    font-size: 24px;
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+}
+
+#page2>div>h6{
+    font-size: 18px;
+    margin-left: 70px;
+    margin-bottom: 0px;
+    margin-top: 16px;
+    margin-right: 30px;
+}
+span{
+    color: rgb(15, 165, 15);
+    margin-right: 5px;
+}
+#page2>div>button{
+    font-size: 18px;
+    padding: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: white;
+    background-color:rgb(39, 109, 39);
+  margin: 80px ;
+  border: 2px solid black;
+  /* margin-left: 50px; */
+  border-radius: 24px;
+  cursor: pointer;
+}

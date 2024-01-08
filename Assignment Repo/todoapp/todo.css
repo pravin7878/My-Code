@@ -1,0 +1,71 @@
+h1{
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+div{
+    width: 95%;
+    margin: auto;
+}
+div>form{
+    border: solid 1px green;
+    width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 12px;
+    margin: auto;
+    padding: 20px;
+}
+div>form>input{
+    margin: 10px;
+    margin-left: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+    width: 350px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center; 
+}
+div>form>label{
+    margin: 10px;
+    font-weight: bold;
+    margin-left: 60px;
+    font-size: 28px;
+}
+div>form>select{
+    margin: 10px;
+    margin-left: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 20px;
+}
+div>form>#btn{
+    width: 400px;
+    background-color: rgb(17, 0, 255);
+    color: aliceblue;
+    font-weight: bold;
+    border-radius:20px ;
+    margin-left: 70px;
+} 
+
+div>table{
+    border: solid 2px black;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    height: auto;
+}
+div>table>thead{
+    background-color: blue;
+   color: white;
+    font-weight: bold;
+   font-size:24px ; 
+}
+div>table>tbody{
+   font-size: 16px;
+   text-align: center;
+}

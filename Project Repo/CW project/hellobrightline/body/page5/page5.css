@@ -1,0 +1,53 @@
+.head {
+    text-align: center;
+    font-family: GT Walsheim,ApercuPro,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+   
+}
+
+#parent {
+    display: flex; 
+   justify-content: space-between;
+    margin-top: 40px;
+    height: auto;
+    font-family: GT Walsheim,ApercuPro,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+}
+
+#parent>div {
+    width: 48%;  
+    height: auto;
+}
+#parent>:first-child>div{
+    padding-left: 100px;
+}
+
+#parent>div>img {
+    width: 100%;
+}
+
+#parent>div>div>h1 {
+    color: rgb(9, 89, 9);
+    margin-bottom: 0px;
+}
+
+#parent>div>div>p {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+#parent>div>div {
+    padding-left: 5px;
+}
+
+#parent>div>div>button {
+    padding: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 30px;
+    border: solid 1px green;
+    font-weight: bold;
+    color: rgb(14, 141, 14);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

@@ -1,0 +1,39 @@
+#home{
+    display: flex;
+    /* justify-content: space-around; */
+    font-size: 30px;
+    height: 750px;
+    margin: auto;
+    width: 100%;
+   
+}
+#home>div{
+    width: 50%;
+    height: auto;    
+}
+.text{
+    padding: 20px;
+    padding-top: 30px;
+}
+.homeimg{
+    display: block;
+    height:100%;
+    width: 100%;
+    /* border: solid 2px rgb(10, 11, 10); */
+}
+.calltoac{
+    display: flex;
+    width: 70%;
+    height: 60px;
+    align-items: center;
+   
+}
+.calltoac>.jointoday{
+    font-size: 23px;
+    color: aliceblue;
+    background-color: rgb(33, 117, 33) ;
+    padding: 8px;
+    border-radius: 16px;
+    margin-left: 20px;
+    margin-right: 10px;
+}

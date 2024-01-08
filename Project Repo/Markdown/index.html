@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promis</title>
+</head>
+<body>
+    <h1>promise</h1>
+    <button onclick="show()">show</button>
+    <div id="main"></div>
+    <!-- <div class="red"></div>
+    <button id="one"></button>
+    <button id="two"></button> -->
+</body>
+<script>
+    let div = document.getElementById('main')
+   function show (){
+    let home = document.createElement('input')
+    // let red = document.createElement('div')
+
+    let btn1 = document.createElement('button')
+    let btn2 = document.createElement('button')
+
+    btn1.innerText = 'btn1'
+    btn2.innerText = 'btn2'
+
+    div.append(btn1,btn2)
+   console.log(btn1,btn2)
+
+   btn1.addEventListener('click',function(){
+    // let home = document.createElement('div')
+    home.style.backgroundColor='blue'
+    home.setAttribute('placeholder','enter your name')
+    div.append(home)
+   })
+
+   btn2.addEventListener('click',function(){
+    // let home = document.createElement('div')
+    home.style.backgroundColor='red'
+    home.setAttribute('placeholder','enter your age')
+    div.append(home)
+   })
+   }
+
+//  div.append(btn1,btn2)
+    // let Mypromise1 = new Promise(function(resolve,reject){
+    //     resolve('promise resolved')
+    // })
+    // console.log(Mypromise1)
+    // let Mypromise2 = new Promise(function(resolve,reject){
+    //     reject('promise rejected')
+    // })
+    // console.log(Mypromise2)
+    // let Mypromise3 = new Promise(function(resolve,reject){
+    //     setTimeout(() => {
+    //         resolve('promise will be resolve after 2 sec')
+    //     }, 2000);
+    // }
+       
+    // )
+    // console.log(Mypromise3)
+</script>
+</html>

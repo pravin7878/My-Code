@@ -1,0 +1,33 @@
+#head{
+    text-align: center;
+    font-family: GT Walsheim,ApercuPro,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+    font-weight: 600px;
+}
+#parent{
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin: auto;
+}
+#parent>div{
+    width:50%;
+}
+#parent>div>img{
+    width: 110%;
+}
+.child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 50px;
+    text-align: center;
+    font-family: GT Walsheim,ApercuPro,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif; 
+    font-weight: 600px; 
+}
+.child>div>img{
+    width: 30%;
+}
+.child>div>h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}

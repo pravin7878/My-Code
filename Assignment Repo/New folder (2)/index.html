@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    text-align: center;
+    padding: 0px 30px;
+}
+</style>
+
+<body>
+    <h1>Reading Practise content site</h1>
+    <div id="maindiv"></div>
+    <button id="btn"></button>
+
+    <div class="time"></div>
+    <button id="btn1">Time Start</button>
+</body>
+<script>
+    let mydiv1 = document.getElementById('maindiv')
+    let output = ` <h1>this is my heading</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ratione libero molestiae numquam, dignissimos quis et explicabo quasi harum. Eos minus veniam quod iure adipisci placeat facilis vitae possimus neque!</p>`
+    // mydiv1.innerText = output
+
+    let mybtn = document.getElementById('btn')
+    btn.innerText = 'show'
+
+    let mydiv2 = document.querySelector('.time')
+    let h3 = document.createElement('h3')
+   
+    let mybtn2 = document.getElementById('btn1')
+
+    mybtn.addEventListener('click', function () {
+        if (btn.innerText == 'show') {
+            btn.innerText = 'hide'
+            mydiv1.innerText = output
+            h3.innerText= 0
+            mydiv2.append(h3)
+        }
+        else {
+            btn.innerText = 'show'
+            mydiv1.innerText = ''
+            h3.innerText= ''
+            mydiv2.append(h3)
+        }
+    })
+
+    // let mybtn2 = document.getElementById('btn1')
+    let interval;
+    mybtn2.addEventListener('click', () => {
+        
+        if (mybtn2.innerText == 'Time Start') {
+            mybtn2.innerText = 'Time Stop'
+            h3.innerText= 0
+           interval = setInterval(function(){
+                h3.innerText++
+            },1000)
+        }
+
+        else {
+            mybtn2.innerText = 'Time Start'
+            clearInterval(interval)
+            h3.innerText= 0
+        }
+    })
+    
+
+</script>
+
+</html>
