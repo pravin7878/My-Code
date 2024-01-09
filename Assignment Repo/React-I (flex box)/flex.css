@@ -1,0 +1,51 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: black solid 2px;
+    width: 90%;
+    margin: auto;
+    background: khaki;
+}
+
+
+.child1 {
+    width: 13%;
+    height: 100px;
+    border: solid 2px rgb(12, 12, 12);
+    margin: 10px;
+    background: #ff0707;
+    font-size: 24px;
+
+
+}
+
+.child2 {
+    width: 13%;
+    height: 100px;
+    border: solid 2px rgb(12, 12, 12);
+    margin: 10px;
+    background: #f5e402;
+    font-size: 24px;
+
+}
+
+.child3 {
+    width: 13%;
+    height: 100px;
+    border: solid 2px rgb(12, 12, 12);
+    margin: 10px;
+    background: #13ff07;
+    font-size: 24px;
+
+}
+
+.child4 {
+    width: 13%;
+    height: 100px;
+    border: solid 2px rgb(12, 12, 12);
+    margin: 10px;
+    background: #7f07ff;
+    font-size: 24px;
+}
