@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#root>h1,button{
+  margin: 6px;
+}
+#root>button{
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  border: solid 2px black;
+  padding: 6px 13px;
+}

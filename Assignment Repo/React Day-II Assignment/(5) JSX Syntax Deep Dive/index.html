@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSX syntex deep</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+
+        function JSXShowcase() {
+            let containt = "we can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2 , user.firstName , or formatName(user) are all valid JavaScript expressions. "
+        
+            const [text,settext] = React.useState(containt);
+            const [status,setstatus] = React.useState(false)
+            let isclicked = false
+            function hendelclick() {
+              text ? settext('') : settext(containt)
+            }
+            return (
+                <div>
+                    <h1>Embedding Expressions in JSX</h1>
+                    <p>{text}</p>
+                    <button onClick={hendelclick}>show/hide Containte</button>
+                    
+                </div>
+            )
+           
+
+        
+
+    }
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+        
+            reactRoot.render(<JSXShowcase />)
+       
+
+    </script>

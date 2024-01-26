@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your JSX code here
+
+    // Basic Level: Simple JSX Element
+
+    function BasicProb() {
+      return (
+        <>
+          <p>Seize the day</p>
+        </>
+      )
+    }
+
+    
+
+// Intermediate Level: Dynamic Content in JSX
+
+function IntermediateProb(){
+  let text = "Seize the day"
+  return (
+        <>
+          <p>{text}</p>
+        </>
+      )
+}
+
+// Advanced Level: Conditional Rendering in JSX
+
+function AdvanseProb(){
+  let text1 = "text1 :- Seize the day"
+  let text2 = "text2 :- Make the most of it"
+  let isRendered = true
+  return (
+        <>
+          <p>{isRendered ? text1 : text2}</p>
+        </>
+      )
+}
+
+
+    function App() {
+      return (
+        <>
+          <BasicProb/>
+          <IntermediateProb/>
+          <AdvanseProb/>
+        </>
+      )
+    }
+    const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+
+    reactRoot.render(<App />)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Code</title>
+</head>
+<style>
+    #root {
+        width: 25%;
+        margin: auto;
+        background-color: lightblue;
+        padding: 5px;
+    }
+    
+</style>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+
+    function BirthdayCard(prop) {
+        const [recipientName, setrecipientName] = React.useState(prop.name)
+
+        const [customMessage, setcustomMessage] = React.useState(prop.massage)
+    //    (customMessage.lenth > 5) ? createImageBitmap.className = "bgred" : createImageBitmap.className = "bgaqua"
+    if((prop.name).length > 5){
+        console.log('length is greator then 5');
+        return (
+            <>
+
+                <h3 style = {{color:"red"}} >"Heppy Birthday my friends{recipientName}! {customMessage}"</h3>
+
+            </>
+        );
+    }
+    else{
+        return(
+            <>
+        <h3 style = {{color:"black"}}>"Heppy Birthday {recipientName}! {customMessage}"</h3>
+        </>)
+    }
+        
+    }
+
+
+
+    function App() {
+        return (<>
+
+            <BirthdayCard name={"pravin"} massage={'wish you all the best'} />
+        </>
+        )
+    }
+
+
+    
+    reactRoot.render(<App />)
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSX syntex deep</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function Logo(LOGOIMG) {
+            console.log(LOGOIMG);
+            return (
+                <h2>{LOGOIMG.LOGO}</h2>
+            )
+        }
+        function MenuBar() {
+            return (
+                <>
+                    <ul>
+                        <li><a href="">Home </a></li>
+                        <li><a href="">About </a></li>
+                        <li><a href="">Servisec </a></li>
+                        <li><a href="">Contect Us </a></li>
+                    </ul>
+                </>
+            )
+        }
+        function Header(prop) {
+
+            return (
+                <div>
+                    <Logo LOGO={prop.name} />
+                    <MenuBar />
+                </div>
+            )
+        }
+
+        function MeneSec(prop) {
+            console.log(prop.Containt);
+            return (
+                <div>
+                    <h2> Mene Sec</h2>
+                    <h3>{prop.title}</h3>
+                    <p>{prop.Containt}</p>
+                    <p></p>
+                </div>
+            )
+        }
+
+        function Footer(prop) {
+            return (
+                <h3>{prop.footer}</h3>
+            )
+        }
+
+        function App() {
+            return (
+                <>
+                    <hr />
+                    <Header name={'pravin'} />
+                    <hr />
+                    <MeneSec title={'how Babel transpiles JSX into JavaScript'} Containt={'It also lets us utilize JSX, a JavaScript syntax extension that resembles HTML and provides an intuitive way to construct React components. When we write JSX, Babel transpiles it into JavaScript using `React. createElement` calls.'} />
+                    <br />
+                    <hr />
+                    <Footer footer={'this is my footer sec'} />
+                    <hr />
+                </>
+            )
+        }
+
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+
+        reactRoot.render(<App />)
+    </script>

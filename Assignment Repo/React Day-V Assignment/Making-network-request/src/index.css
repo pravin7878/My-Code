@@ -1,0 +1,27 @@
+
+#root{
+text-align: center;
+}
+#root>button{
+    padding: 10px 20px;
+    margin: 12px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    border-radius: 13px;
+    cursor: pointer;
+}
+#root>div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#root>div>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    border: solid 1px blue;
+}
