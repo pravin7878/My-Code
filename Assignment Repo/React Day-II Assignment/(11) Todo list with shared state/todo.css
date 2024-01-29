@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#root {
+    display: flex;
+    background-image: linear-gradient(to bottom right , black,rgba(227, 8, 8, 0.81) ,rgb(174, 0, 255),black);
+    height: 100vh;
+    align-items: center;
+    justify-self: center;
+}
+
+#root>div {
+    text-align: center;
+    width: 50%;
+    height: 50vh;
+    padding: 20px;
+    margin: auto;
+    border: solid 2px black;
+    font-size: 24px;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+}
+
+.Addtask {
+   font-size: 24px;
+    padding: 12px 0px;
+}
+.Addtask>label{
+    font-size: 34px;
+}
+.Addtask>input{
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: solid 2px black;
+    font-weight: bold;
+    color: black;
+}
+.Addtask>span{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-around;
+}
+.Addtask>span>button{
+    padding: 12px 30px;
+    background-color: blue;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45%;
+}
+ 
+.Addtask>span>button:hover{
+    background-color: rgba(0, 0, 255, 0.651);
+ rotate: 20px;
+ padding: 10px 25px;
+}
+
+    
+
+#root .Showtask {
+    /* display: none; */
+/* margin-top: 100px; */
+}  
+.Showtask>table{
+    width: 100%;
+    background-color: gray;
+
+}
+.Showtask>div{
+    text-align: left;
+    
+}
+.Showtask>div>button{
+    color: white;
+    border: none;
+    background-color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.Showtask>div>button:hover{
+    color: red;
+}
+.Showtask>table>thead>tr{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+.Showtask>table>thead>tr>th{
+    width: 25%;
+    border: solid 2px black;
+}
+
+.Showtask>table>tbody>tr{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+.Showtask>table>tbody>tr>td{
+    width: 25%;
+    border-bottom: solid 1px black;
+    
+}
+
+.Listshowhide{
+    /* display: none; */
+    border: solid 2px red;
+}

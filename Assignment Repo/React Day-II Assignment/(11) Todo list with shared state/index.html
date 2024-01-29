@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+</head>
+<link rel="stylesheet" href="./todo.css">
+
+<body>
+
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // Code goes here
+    function Addtodo() {
+        const [Task, setTask] = React.useState('')
+        const [data, setdata] = React.useState([])
+        const [liststatus, setliststatus] = React.useState(false)
+        const [taskInpstatus, settaskInpstatus] = React.useState(true)
+
+        function hendelchange(event) {
+            let inpvalue = event.target.value
+            // console.log(inpvalue);
+            setTask(inpvalue)
+        }
+
+        function hendalAdd() {
+            // let inpvalue = document.getElementById('Addtask')
+            setdata([...data, Task])
+            // inpvalue.value = ""
+            // setTask(inpvalue)
+        }
+
+        function hendelDeletTask(id) {
+            console.log(id);
+
+            const Updetdata = data.filter((task, taskId) => {
+                return id !== taskId
+            })
+            setdata(Updetdata);
+        }
+
+        function hendellist() {
+            console.log('hello');
+            setliststatus(true)
+            settaskInpstatus(false)
+
+        }
+
+
+        return (
+
+            <>
+            { taskInpstatus ? 
+                <div className='Addtask'>
+                    <label >Add Task</label>
+                    <br />
+                    <input type="text" id="AddTask" onChange={hendelchange} />
+                    <br />
+                    <br />
+                    <span>
+                        <button onClick={hendalAdd}>ADD TASK</button>
+                        <button onClick={hendellist}>Show List</button>
+
+                    </span>
+
+
+                </div>
+                :null}
+
+                {liststatus ?
+                <div className='Showtask'>
+                    <div>
+                        <button onClick={()=>{
+                        settaskInpstatus(true)
+                        setliststatus(false)
+                    }}>Back</button>
+                        </div>
+                   
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Status</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {data.map((ele, ind) => {
+                                return (
+                                    <tr key={ind}>
+                                        <td>{ind}</td>
+                                        <td>{ele}</td>
+                                        <td><input type="checkbox" id="status" /></td>
+                                        <td><button onClick={() => hendelDeletTask(ind)}>Delet</button></td>
+                                    </tr>
+                                )
+                            })}
+                       
+                        </tbody>
+                    </table>
+                </div>
+                :null}
+            </>);
+
+
+    }
+
+    // function ShowData(prop) {
+    //     let mydata = prop.itom
+    //     // console.log(mydata);
+    //     // mydata.map(function(ele){
+    // let datarows = mydata.forEach((ele) => {
+    //         console.log(ele);
+    //         return <tr>
+    //             <td>{ele}</td>
+    //             <td>Status</td>
+    //             <td>delete</td>
+    //         </tr>
+    //     })
+    //     // return (
+    //     //     <tr>
+    //     //         <td>{datarows}</td>
+    //     //         <td>Status</td>
+    //     //         <td>delete</td>
+    //     //     </tr>
+
+    //     // )
+
+    //     //  console.log(ele);
+    //     // console.log(prop,"inside the show data");
+
+
+    // }
+
+
+    function TodoApp() {
+        return (
+            <div>
+                <h1>Todo List</h1>
+                <Addtodo />
+
+            </div>
+        )
+    }
+
+    const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+    reactRoot.render(<TodoApp />)
+</script>
+
+</html>

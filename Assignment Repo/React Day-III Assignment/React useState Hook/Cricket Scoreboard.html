@@ -6,6 +6,154 @@
     <title>Cricket Scoreboard</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Scoreboard</title>
+  </head>
+ <style>
+    #root{
+    display: flex;
+    flex-direction:column ;
+    gap: 15px;
+    width: 40%;
+    margin: auto;
+    background-color: #000;
+    border-radius: 12px;
+    padding-bottom:2rem ;
+}
+#root>h1{
+    color: white;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 34px;
+}
+#root>div>h3{
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 6px 15px;
+    border-radius: 8px;
+    border: solid 2px rgb(0, 0, 0);
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#root>div>button{
+    background-color: blue;
+    border-radius:12px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+#root>:last-child>button{
+    background-color: rgb(255, 0, 0);
+    border-radius:12px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+#root>div>button:hover{
+    padding: 6px 16px;
+    margin: 3px;
+
+}
+#root>div{
+    display: flex;
+    justify-content: space-around;
+}
+
+ </style>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Code goes here
+   
+function CricketScoreboard(){
+    const [runs,setruns] = React.useState(0);
+    const [wickets,setwickets] = React.useState(0);
     
+    function increaseRun8(){
+        if(wickets==0){
+            setruns((prev)=>prev+8)
+            alert("please first updet wickets")
+        }
+        else{
+            setruns((prev)=>prev+4)
+            setwickets(wickets-1)
+        }
+    }
+    function increaseRun4(){
+        if(wickets==0){
+            setruns((prev)=>prev+0)
+            alert("please first updet wickets")
+        }
+        else{
+            setruns((prev)=>prev+4)
+            setwickets(wickets-1)
+        }
+       
+      
+
+    }
+    function increaseRun3(){
+        if(wickets==0){
+            setruns((prev)=>prev+0)
+            alert("please first updet wickets")
+        }
+        else{
+            setruns((prev)=>prev+3)
+            setwickets(wickets-1)
+        }
+
+    }
+
+    function IncreaseWicket(){
+       
+        if(wickets==8){
+            setwickets((prev)=>prev+0) 
+        }
+        else{
+            setwickets((prev)=>prev+1)
+        }
+        
+    }
+
+
+    return(
+        <>
+        <h1>Cricket Scoreboard</h1>
+        <div>
+            <h3>Runs : {runs}</h3>
+        <h3>Wickets : {wickets}</h3>
+            </div>
+        
+        <div>
+            <button onClick={increaseRun8 }>Increase runs by 8</button>
+            <button onClick={increaseRun4 }>Increase runs by 4</button>
+            <button onClick={increaseRun3 }>Increase runs by 3</button>
+            </div>
+           
+            <div>
+                <button onClick={IncreaseWicket}>Update Wicket</button>
+
+                <button onClick= {()=>{setruns(0); setwickets(0);}}>Reset All</button>
+                </div>
+           
+        </>
+    )
+}
+const reactRoot = ReactDOM.createRoot(document.getElementById('root'))
+reactRoot.render(<CricketScoreboard/>)
+
+  </script>
+</html>
 </body>
 </html>
