@@ -1,32 +1,65 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import "./Component/PostItem"
 import './App.css'
+import PostItem from './Component/PostItem';
 
 function App() {
   const [post,setpost] = useState([]);
   const [loading,isloading] = useState(false);
-  const [error,Iserror] = useState()
+  const [error,Iserror] = useState(false)
+  const [startInd,setstartInd] = useState()
+  const [EndInd,setEndInd] = useState()
+  
+  
+  
+
+  
+
+  // console.log(post.slice(startInd,EndInd));
+
   const getdata = async()=>{
     try {
-      isloading('Data is Being Loading')
+      isloading(true)
       const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
           const fineldata = await res.json()
       setpost(fineldata)
-      isloading("Data is Loaded")
     } 
     catch (error) {
-      Iserror('something went Wrong')
+      Iserror(true)
     }
    
-useEffect(()=>{
-  getdata()
-},[])
-console.log(post);
+
+
   }
+ 
+  useEffect(()=>{
+    getdata()
+  },[])
+
+  function hendelprev(){
+    setstartInd(2)
+    setEndInd(5)
+  }
+
+  function hendelnext(){
+  
+  }
+
  return(
   <>
   <h1>Fetch User Data With Use Effect</h1>
+  
+  {loading ? 
+  <div><PostItem data = {post} /></div>
+     :
+     <h1>Data is Loading</h1>}
+
+     {error ? <h1>Somthing went Rong</h1> : null}
+
+     <div>
+      <button onClick={hendelprev} >Previous</button>
+     <button onClick={hendelnext} >Next</button>
+     </div>
   </>
  )
    

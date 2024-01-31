@@ -1,0 +1,16 @@
+#root{
+    text-align: center;
+}
+#root>div{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+#root>div>div{
+    border: solid 2px rgb(4, 0, 255);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
